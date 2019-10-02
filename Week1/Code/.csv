@@ -1,0 +1,18 @@
+
+
+echo -e "test \t\t test" >> ../SandBox/test.txt
+[A[A[A[A
+
+[Ahelp
+echo -e "test \t\t test" >> ../SandBox/test.txt
+bash tabtocsv.sh ../SandBox/test.txt
+
+
+
+help
+
+
+
+
+esc
+quit
