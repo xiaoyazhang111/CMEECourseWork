@@ -1,0 +1,280 @@
+Starting weekly assessment for Xiaoya, Week1
+
+Current Points = 100
+
+Note that: 
+(1) Major sections begin with a double "====" line 
+(2) Subsections begin with a single "====" line 
+(3) Code output or text file content are printed within single "*****" lines 
+
+======================================================================
+======================================================================
+Your Git repo size this week is about 89.24 KiB on disk 
+
+PART 1: Checking project workflow...
+
+Found the following directories in parent directory: Week1, Assessment, .git
+
+Found the following files in parent directory: README.txt, .gitignore
+
+Checking for key files in parent directory...
+
+Found .gitignore in parent directory, great! 
+
+Printing contents of .gitignore:
+**********************************************************************
+*~ 
+*.tmp
+**********************************************************************
+
+Found README in parent directory, named: README.txt
+
+Printing contents of README.txt:
+**********************************************************************
+My CMEE Coursework Repository
+Do I like this better?
+**********************************************************************
+
+======================================================================
+Looking for the weekly directories...
+
+Found 1 weekly directories: Week1
+
+The Week1 directory will be assessed 
+
+======================================================================
+======================================================================
+PART 2: Checking weekly code and workflow...
+
+======================================================================
+Assessing WEEK1...
+
+Found the following directories: Code, SandBox, Results
+
+Found the following files: 
+
+Checking for readme file in weekly directory...
+
+README file missing, 1 pt deducted
+
+Current Points = 99
+
+Data directory missing!
+
+Found following files in results directory: ...
+
+Found 6 code files: variables.sh, FirstExample.tex, MyExampleScript.sh, FirstBiblio.bib, tabtocsv.sh, boilerplate.sh
+
+Found the following extra files: FirstExample.blg, FirstExample.log, FirstExample.pdf, FirstExample.aux, FirstExample.bbl
+0.5 pt deducted per extra file
+
+Current Points = 96.5
+
+======================================================================
+Testing script/code files...
+
+======================================================================
+Inspecting script file variables.sh...
+
+File contents are:
+**********************************************************************
+#!/bin/bash
+
+# Shows the use of variables
+MyVar='some string'
+echo 'the current value of the variable is' $MyVar
+echo 'Please enter a new string'
+read MyVar
+echo 'the current value of the variable is' $MyVar
+
+## Reading multiple values
+echo 'Enter two numbers separated by space(s)'
+read a b
+echo 'you entered' $a 'and' $b '. Their sum is:'
+mysum=`expr $a + $b`
+echo $mysum
+**********************************************************************
+
+Testing variables.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+the current value of the variable is some string
+Please enter a new string
+the current value of the variable is
+Enter two numbers separated by space(s)
+you entered and . Their sum is:
+
+
+**********************************************************************
+
+Encountered error (or warning):
+expr: syntax error
+
+======================================================================
+Inspecting script file FirstExample.tex...
+
+File contents are:
+**********************************************************************
+\documentclass[12pt]{article}
+\title{A Simple Document}
+\author{Your Name}
+\date{}
+\begin{document}
+  \maketitle
+
+  \begin{abstract}
+    This paper must be cool!
+  \end{abstract}
+
+  \section{Introduction}
+    Blah Blah!
+
+  \section{Materials \& Methods}
+  One of the most famous equations is:
+  \begin{equation}
+    E = mc^2
+  \end{equation}
+  This equation was first proposed by Einstein in 1905 
+  \cite{einstein1905does}.
+
+  \bibliographystyle{plain}
+  \bibliography{FirstBiblio}
+\end{document}**********************************************************************
+
+Testing FirstExample.tex...
+
+======================================================================
+Inspecting script file MyExampleScript.sh...
+
+File contents are:
+**********************************************************************
+#!/bin/bash
+
+msg1="Hello"
+msg2=$USER
+echo "$msg1 $msg2"
+echo "Hello $USER"
+echo
+**********************************************************************
+
+Testing MyExampleScript.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Hello mhasoba
+Hello mhasoba
+
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00409s
+
+======================================================================
+Inspecting script file FirstBiblio.bib...
+
+File contents are:
+**********************************************************************
+@article{einstein1905does,
+  title={Does the inertia of a body depend upon its energy-content},
+  author={Einstein, Albert},
+  journal={Annalen der Physik},
+  volume={18},
+  number={13},
+  pages={639--41},
+  year={1905}
+}**********************************************************************
+
+Testing FirstBiblio.bib...
+
+======================================================================
+Inspecting script file tabtocsv.sh...
+
+File contents are:
+**********************************************************************
+#!/bin/bash
+# Author: Your name you.login@imperial.ac.uk
+# Script: tabtocsv.sh
+# Desc: substitute the tabs in the files with commas
+#
+
+
+echo "Creating a comma delimited version of $1 ..."
+cat $1 | tr -s "\t" "," >> $1.csv
+echo "Done!"
+
+
+exit
+**********************************************************************
+
+Testing tabtocsv.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Creating a comma delimited version of  ...
+Done!
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00571s
+
+======================================================================
+Inspecting script file boilerplate.sh...
+
+File contents are:
+**********************************************************************
+#!/bin/bash
+# Author: Your Name your.login@imperial.ac.uk
+# Script: boilerplate.sh
+# Desc: simple boilerplate for shell scripts
+# Arguments: none
+# Date: Oct 2018
+
+echo -e "\nThis is a shell script! \n" #what does -e do?
+echo "Remove    excess      spaces." | tr -s "\b" " "
+echo "remove all the as" | tr -d "a"
+echo "set to uppercase" | tr [:lower:] [:upper:]
+echo "10.00 only numbers 1.33" | tr -d [:alpha:] | tr -s " " ","
+#exit
+**********************************************************************
+
+Testing boilerplate.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+This is a shell script! 
+
+Remove excess spaces.
+remove ll the s
+SET TO UPPERCASE
+10.00,1.33
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00963s
+
+======================================================================
+======================================================================
+Finished running scripts
+
+Ran into 1 errors
+
+======================================================================
+======================================================================
+
+FINISHED WEEKLY ASSESSMENT
+
+Current Points for the Week = 96.5
+
+NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!
