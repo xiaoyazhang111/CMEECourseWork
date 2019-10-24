@@ -12,10 +12,10 @@ densityplot(~log(Predator.mass) | Type.of.feeding.interaction, data=MyDF)
 
 PredatorMean <- mean(log(MyDF$Predator.mass))
 PreyMean <- mean(log(MyDF$Prey.mass))
-PredatorPreyMean <-mean(log(MyDF$Predator.mass/MyDF$Prey.mass))
+PredatorPreyMean <-mean(log(MyDF$Prey.mass/MyDF$Predator.mass))
 PredatorMedian <- median(log(MyDF$Predator.mass))
 PreyMedian <- median(log(MyDF$Prey.mass))
-PredatorPreyMedian <- median(log(MyDF$Predator.mass/MyDF$Prey.mass))
+PredatorPreyMedian <- median(log(MyDF$Prey.mass/MyDF$Predator.mass))
 
 mean <- as.data.frame(c(PredatorMean,PreyMean,PredatorPreyMean))
 median <- as.data.frame(c(PredatorMedian,PreyMedian,PredatorPreyMedian))
