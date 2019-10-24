@@ -1,0 +1,28 @@
+MyDF <- read.csv("../Data/EcolArchives-E089-51-D1.csv")
+dim(MyDF) 
+str(MyDF)
+head(MyDF)
+require(dplyr)
+library(lattice)
+dplyr::glimpse(MyDF)
+pdf("../Pred_Lattice.pdf",11.7,8.3)
+densityplot(~log(Predator.mass) | Type.of.feeding.interaction, data=MyDF)
+# densityplot(~log10(Prey.mass) | Type.of.feeding.interaction, data=MyDF)
+# densityplot(log10(MyDF$Predator.mass),log10(MyDF$Prey.mass), xlab = "Predator Mass (g)", ylab = "Prey Mass (g)") 
+
+PredatorMean <- mean(log(MyDF$Predator.mass))
+PreyMean <- mean(log(MyDF$Prey.mass))
+PredatorPreyMean <-mean(log(MyDF$Predator.mass/MyDF$Prey.mass))
+PredatorMedian <- median(log(MyDF$Predator.mass))
+PreyMedian <- median(log(MyDF$Prey.mass))
+PredatorPreyMedian <- median(log(MyDF$Predator.mass/MyDF$Prey.mass))
+
+mean <- as.data.frame(c(PredatorMean,PreyMean,PredatorPreyMean))
+median <- as.data.frame(c(PredatorMedian,PreyMedian,PredatorPreyMedian))
+table <- data.frame(mean,median)
+colnames(table) <-c("mean","median")
+
+setwd("/Users/zhangxiaoya/CMEECoursework/WEEK3/RCoursework/Result/")
+write.csv(table, "PP_Results.csv")
+
+
