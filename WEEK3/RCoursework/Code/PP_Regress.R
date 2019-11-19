@@ -1,5 +1,6 @@
 options(CRAN="https://.cloud.r-project.org/");
 install.packages("ggplot2")
+install.packages("maps")
 
 require(ggplot2)
 qplot(Prey.mass, Predator.mass, data = MyDF)
