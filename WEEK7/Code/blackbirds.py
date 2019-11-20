@@ -8,7 +8,7 @@ with open('/Users/zhangxiaoya/CMEECoursework/WEEK7/Data/TheMulQuaBio/Data/blackb
 text = text.replace('\t',' ')
 text = text.replace('\n',' ')
 
-print(text)
+
 # You may want to make other changes to the text. 
 
 # In particular, note that there are "strange characters" (these are accents and
@@ -20,8 +20,9 @@ text = text.decode('ascii', 'ignore') # Now decode back to string
 
 # Now extend this script so that it captures the Kingdom, Phylum and Species
 # name for each species and prints it out to screen neatly.
-
-print(re.findall(r"Species(.+?)", text))
+print(re.findall(r"Animalia(.+?)Phylum", text))
+print(re.findall(r"Chordata(.+?)Subphylum", text))
+print(re.findall(r"Species(.+?)\s\s\s", text))
 
 # Hint: you may want to use re.findall(my_reg, text)... Keep in mind that there
 # are multiple ways to skin this cat! Your solution could involve multiple
