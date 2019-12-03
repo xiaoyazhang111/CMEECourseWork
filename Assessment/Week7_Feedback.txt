@@ -1,0 +1,454 @@
+Starting weekly assessment for Xiaoya, Week7
+
+Current Points = 100
+
+Note that: 
+(1) Major sections begin with a double "====" line 
+(2) Subsections begin with a single "====" line 
+(3) Code output or text file content are printed within single "*****" lines 
+
+======================================================================
+======================================================================
+Your Git repo size this week is about 89.24 KiB on disk 
+
+PART 1: Checking project workflow...
+
+Found the following directories in parent directory: Week1, Assessment, WEEK7, .git, WEEK2, WEEK3
+
+Found the following files in parent directory: README.txt, .gitignore, .DS_Store
+
+Checking for key files in parent directory...
+
+Found .gitignore in parent directory, great! 
+
+Printing contents of .gitignore:
+**********************************************************************
+*~ 
+*.tmp
+**********************************************************************
+
+Found README in parent directory, named: README.txt
+
+Printing contents of README.txt:
+**********************************************************************
+My CMEE Coursework Repository
+Do I like this better?
+**********************************************************************
+
+======================================================================
+Looking for the weekly directories...
+
+Found 4 weekly directories: WEEK2, WEEK3, WEEK7, Week1
+
+The Week7 directory will be assessed 
+
+======================================================================
+======================================================================
+PART 2: Checking weekly code and workflow...
+
+======================================================================
+Assessing WEEK7...
+
+Found the following directories: Code, Result, Data
+
+Found the following files: .DS_Store
+
+Checking for readme file in weekly directory...
+
+README file missing, 1 pt deducted
+
+Current Points = 99
+
+Found following files in results directory: LV2_mode1.pdf, LV2_mode.pdf, DrawFW.pdf, .DS_Store, LV1_mode.pdf, LV1_mode1.pdf...
+ideally, Results directory should be empty other than, perhaps, a readme. 
+
+Found 5 code files: blackbirds.py, using_os.py, LV1.py, DrawFW.py, LV2.py
+
+Found the following extra files: .DS_Store
+0.5 pt deducted per extra file
+
+Current Points = 98.5
+
+======================================================================
+Testing script/code files...
+
+======================================================================
+Inspecting script file blackbirds.py...
+
+File contents are:
+**********************************************************************
+import re
+
+# Read the file (using a different, more python 3 way, just for fun!)
+with open('/Users/zhangxiaoya/CMEECoursework/WEEK7/Data/TheMulQuaBio/Data/blackbirds.txt', 'r') as f:
+    text = f.read()
+
+# replace \t's and \n's with a spaces:
+text = text.replace('\t',' ')
+text = text.replace('\n',' ')
+
+
+# You may want to make other changes to the text. 
+
+# In particular, note that there are "strange characters" (these are accents and
+# non-ascii symbols) because we don't care for them, first transform to ASCII:
+
+
+text = text.encode('ascii', 'ignore') # first encode into ascii bytes
+text = text.decode('ascii', 'ignore') # Now decode back to string
+
+# Now extend this script so that it captures the Kingdom, Phylum and Species
+# name for each species and prints it out to screen neatly.
+print(re.findall(r"Animalia(.+?)Phylum", text))
+print(re.findall(r"Chordata(.+?)Subphylum", text))
+print(re.findall(r"Species(.+?)\s\s\s", text))
+
+# Hint: you may want to use re.findall(my_reg, text)... Keep in mind that there
+# are multiple ways to skin this cat! Your solution could involve multiple
+# regular expression calls (slightly easier!), or a single one (slightly harder!)**********************************************************************
+
+Testing blackbirds.py...
+
+blackbirds.py is a Python script file;
+
+checking for docstrings...
+
+No functions, but no script-level docstring either
+2 pts deducted
+
+Current Points = 96.5
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Encountered error (or warning):
+Traceback (most recent call last):
+  File "blackbirds.py", line 4, in <module>
+    with open('/Users/zhangxiaoya/CMEECoursework/WEEK7/Data/TheMulQuaBio/Data/blackbirds.txt', 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/zhangxiaoya/CMEECoursework/WEEK7/Data/TheMulQuaBio/Data/blackbirds.txt'
+
+======================================================================
+Inspecting script file using_os.py...
+
+File contents are:
+**********************************************************************
+""" This is blah blah"""
+
+# Use the subprocess.os module to get a list of files and directories 
+# in your ubuntu home directory 
+
+# Hint: look in subprocess.os and/or subprocess.os.path and/or 
+# subprocess.os.walk for helpful functions
+
+import subprocess
+
+subprocess.Popen("Rscript --verbose TestR.R > ../Results/TestR.Rout 2> ../Results/TestR_errFile.Rout", shell=True).wait()
+subprocess.Popen("Rscript --verbose NonExistScript.R > ../Results/outputFile.Rout 2> ../Results/errorFile.Rout", shell=True).wait()
+
+#################################
+#~Get a list of files and 
+#~directories in your home/ that start with an uppercase 'C'
+
+# Type your code here:
+
+# Get the user's home directory.
+home = subprocess.os.path.expanduser("~")
+
+# Create a list to store the results.
+FilesDirsStartingWithC = []
+
+# Use a for loop to walk through the home directory.
+
+  
+#################################
+# Get files and directories in your home/ that start with either an 
+# upper or lower case 'C'
+
+# Type your code here:
+
+#################################
+# Get only directories in your home/ that start with either an upper or 
+#~lower case 'C' 
+
+# Type your code here:
+**********************************************************************
+
+Testing using_os.py...
+
+using_os.py is a Python script file;
+
+checking for docstrings...
+
+Found no functions, but one docstring for the script, good
+
+Current Points = 96.5
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Encountered error (or warning):
+/bin/sh: 1: cannot create ../Results/TestR.Rout: Directory nonexistent
+/bin/sh: 1: cannot create ../Results/outputFile.Rout: Directory nonexistent
+
+======================================================================
+Inspecting script file LV1.py...
+
+File contents are:
+**********************************************************************
+import scipy as sc
+import scipy.stats
+import scipy.integrate as integrate
+import matplotlib.pylab as p
+
+def dCR_dt(pops, t=0):
+
+     R = pops[0]
+     C = pops[1]
+     dRdt = r * R - a * R * C 
+     dCdt = -z * C + e * a * R * C
+    
+     return sc.array([dRdt, dCdt])
+
+r = 1.
+a = 0.1 
+z = 1.5
+e = 0.75
+t = sc.linspace(0, 15, 1000)
+
+R0 = 10
+C0 = 5 
+RC0 = sc.array([R0, C0])
+pops, infodict = integrate.odeint(dCR_dt, RC0, t, full_output=True)
+type(infodict)
+infodict.keys()
+infodict['message']
+
+f1 = p.figure()
+
+p.plot(t, pops[:,0], 'g-', label='Resource density') # Plot
+p.plot(t, pops[:,1]  , 'b-', label='Consumer density')
+p.grid()
+p.legend(loc='best')
+p.xlabel('Time')
+p.ylabel('Population density')
+p.title('Consumer-Resource population dynamics')
+p.show()# To display the figure
+
+f2 = p.figure()
+p.plot(pops[:,0], pops[:,1], 'r-', label='Resource density') # Plot
+
+p.grid()
+p.legend(loc='best')
+p.xlabel('Resource density')
+p.ylabel('Resource density')
+p.title('Consumer density')
+p.show()# To display the figure
+
+f1.savefig('/Users/zhangxiaoya/CMEECourseWork/WEEK7/Result/LV1_mode.pdf') #Save figure
+f2.savefig('/Users/zhangxiaoya/CMEECourseWork/WEEK7/Result/LV1_mode1.pdf') #Save figure
+**********************************************************************
+
+Testing LV1.py...
+
+LV1.py is a Python script file;
+
+checking for docstrings...
+
+Found one or more functions, but completely missing docstrings
+2 pts deducted for missing docstring for script, and .5 pt deducted per missing docstring for function
+
+Current Points = 94.0
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 10.00866s
+
+======================================================================
+Inspecting script file DrawFW.py...
+
+File contents are:
+**********************************************************************
+import networkx as nx
+import scipy as sc
+import matplotlib.pylab as p
+
+def GenRdmAdjList(N = 2, C = 0.5):
+
+    Ids = range(N)
+    ALst = []
+    for i in Ids:
+        if sc.random.uniform(0,1,1) < C:
+            Lnk = sc.random.choice(Ids,2).tolist()
+            if Lnk[0] != Lnk[1]: #avoid self (e.g., cannibalistic) loops
+                ALst.append(Lnk)
+    return ALst
+
+MaxN = 30
+C = 0.75
+AdjL = sc.array(GenRdmAdjList(MaxN, C))
+AdjL
+Sps = sc.unique(AdjL) # get species ids
+SizRan = ([-10,10]) #use log10 scale
+Sizs = sc.random.uniform(SizRan[0],SizRan[1],MaxN)
+Sizs
+p.hist(Sizs) #log10 scale
+
+p.hist(10 ** Sizs) #raw scale
+
+p.close('all') # close all open plot objects
+pos = nx.circular_layout(Sps)
+G = nx.Graph()
+G.add_nodes_from(Sps)
+G.add_edges_from(tuple(AdjL))
+# print(G)
+NodSizs= 1000 * (Sizs-min(Sizs))/(max(Sizs)-min(Sizs)) 
+nx.draw_networkx(G, pos, node_size = NodSizs)
+p.savefig('/Users/zhangxiaoya/CMEECourseWork/WEEK7/Result/DrawFW.pdf') #Save figure
+
+**********************************************************************
+
+Testing DrawFW.py...
+
+DrawFW.py is a Python script file;
+
+checking for docstrings...
+
+Found one or more functions, but completely missing docstrings
+2 pts deducted for missing docstring for script, and .5 pt deducted per missing docstring for function
+
+Current Points = 91.5
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Encountered error (or warning):
+/usr/lib/python3/dist-packages/networkx/drawing/nx_pylab.py:522: MatplotlibDeprecationWarning: The is_string_like function was deprecated in version 2.1.
+  if not cb.is_string_like(edge_color) \
+/usr/lib/python3/dist-packages/networkx/drawing/nx_pylab.py:543: MatplotlibDeprecationWarning: The is_string_like function was deprecated in version 2.1.
+  if cb.is_string_like(edge_color) or len(edge_color) == 1:
+/usr/lib/python3/dist-packages/networkx/drawing/nx_pylab.py:724: MatplotlibDeprecationWarning: The is_string_like function was deprecated in version 2.1.
+  if not cb.is_string_like(label):
+Traceback (most recent call last):
+  File "DrawFW.py", line 36, in <module>
+    p.savefig('/Users/zhangxiaoya/CMEECourseWork/WEEK7/Result/DrawFW.pdf') #Save figure
+  File "/usr/local/lib/python3.5/dist-packages/matplotlib/pyplot.py", line 697, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/matplotlib/figure.py", line 1814, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/matplotlib/backend_bases.py", line 2259, in print_figure
+    **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/matplotlib/backends/backend_pdf.py", line 2584, in print_pdf
+    file = PdfFile(filename, metadata=kwargs.pop("metadata", None))
+  File "/usr/local/lib/python3.5/dist-packages/matplotlib/backends/backend_pdf.py", line 439, in __init__
+    fh = open(filename, 'wb')
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/zhangxiaoya/CMEECourseWork/WEEK7/Result/DrawFW.pdf'
+
+======================================================================
+Inspecting script file LV2.py...
+
+File contents are:
+**********************************************************************
+import scipy as sc
+import scipy.stats
+import scipy.integrate as integrate
+import matplotlib.pylab as p
+
+def dCR_dt(pops, t=0):
+
+     R = pops[0]
+     C = pops[1]
+     K = 10
+     dRdt = r * R * (1-(R/K)) - a * R * C 
+     dCdt = -z * C + e * a * R * C
+    
+     return sc.array([dRdt, dCdt])
+
+r = 1.
+a = 0.1 
+z = 1.5
+e = 0.75
+t = sc.linspace(0, 15, 1000)
+
+R0 = 10
+C0 = 5 
+RC0 = sc.array([R0, C0])
+pops, infodict = integrate.odeint(dCR_dt, RC0, t, full_output=True)
+type(infodict)
+infodict.keys()
+infodict['message']
+
+f1 = p.figure()
+
+p.plot(t, pops[:,0], 'g-', label='Resource density') # Plot
+p.plot(t, pops[:,1]  , 'b-', label='Consumer density')
+p.grid()
+p.legend(loc='best')
+p.xlabel('Time')
+p.ylabel('Population density')
+p.title('Consumer-Resource population dynamics')
+p.show()# To display the figure
+
+f2 = p.figure()
+p.plot(pops[:,0], pops[:,1], 'r-', label='Resource density') # Plot
+
+p.grid()
+p.legend(loc='best')
+p.xlabel('Resource density')
+p.ylabel('Resource density')
+p.title('Consumer density')
+p.show()# To display the figure
+
+f1.savefig('/Users/zhangxiaoya/CMEECourseWork/WEEK7/Result/LV2_mode.pdf') #Save figure
+f2.savefig('/Users/zhangxiaoya/CMEECourseWork/WEEK7/Result/LV2_mode1.pdf') #Save figure
+**********************************************************************
+
+Testing LV2.py...
+
+LV2.py is a Python script file;
+
+checking for docstrings...
+
+Found one or more functions, but completely missing docstrings
+2 pts deducted for missing docstring for script, and .5 pt deducted per missing docstring for function
+
+Current Points = 89.0
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 10.01561s
+
+======================================================================
+======================================================================
+Finished running scripts
+
+Ran into 3 errors
+
+======================================================================
+======================================================================
+
+FINISHED WEEKLY ASSESSMENT
+
+Current Points for the Week = 89.0
+
+NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!
