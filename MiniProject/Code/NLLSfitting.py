@@ -1,3 +1,7 @@
+# Author: Xiaoya Zhang/xiaoya.zhang19@imperial.ac.uk
+# Script: Data preparation.py
+# Desc: read the data and process it for model fitting
+# Date: Mar 2020
 import pandas as pd
 import scipy as sc
 import matplotlib.pylab as pl

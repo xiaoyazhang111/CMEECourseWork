@@ -1,3 +1,7 @@
+# Author: Xiaoya Zhang/xiaoya.zhang19@imperial.ac.uk
+# Script: Data preparation.py
+# Desc: imports the data and modify it for NLLS fitting
+# Date: Mar 2020
 import pandas as pd
 import scipy as sc
 import matplotlib.pylab as pl
