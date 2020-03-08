@@ -1,4 +1,4 @@
-Starting weekly assessment for Xiaoya, Week3
+Starting weekly assessment for Xiaoya, Week4
 
 Current Points = 100
 
@@ -39,40 +39,11 @@ Looking for the weekly directories...
 
 Found 4 weekly directories: WEEK2, WEEK3, WEEK7, Week1
 
-The Week3 directory will be assessed 
+The Week4 directory will be assessed 
 
 ======================================================================
 ======================================================================
 PART 2: Checking weekly code and workflow...
-
-======================================================================
-Assessing WEEK3...
-
-Found the following directories: RCoursework
-
-Found the following files: README.txt, .DS_Store
-
-Checking for readme file in weekly directory...
-
-Found README in parent directory, named: README.txt
-
-Printing contents of README.txt:
-**********************************************************************
-TreeHeight.R:
-It loads trees.csv and calculates tree heights for all trees in the data.
-
-TreeHts.csv:
-It is a output file contains the calculated tree heights 
-along with the original data in the following format.
-
-TAutoCorr.R:
-It loads and examine and plot KeyWestAnnualMeanTemperature.Rdata, using load(). 
-This is the temperature in Key West, Florida for the 20th century.
-And it compute the appropriate correlation coefficient between successive years and store it
-and repeat this calculation 10000 times.**********************************************************************
-
-Code directory missing!
-Aborting this weeks assessment!
 
 ======================================================================
 ======================================================================

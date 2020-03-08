@@ -13,9 +13,9 @@ Your Git repo size this week is about 89.24 KiB on disk
 
 PART 1: Checking project workflow...
 
-Found the following directories in parent directory: Week1, Assessment, .git
+Found the following directories in parent directory: Week1, Assessment, HPC Coursework, WEEK7, .git, WEEK2, WEEK3
 
-Found the following files in parent directory: README.txt, .gitignore
+Found the following files in parent directory: README.txt, .gitignore, .DS_Store
 
 Checking for key files in parent directory...
 
@@ -32,13 +32,12 @@ Found README in parent directory, named: README.txt
 Printing contents of README.txt:
 **********************************************************************
 My CMEE Coursework Repository
-Do I like this better?
 **********************************************************************
 
 ======================================================================
 Looking for the weekly directories...
 
-Found 1 weekly directories: Week1
+Found 4 weekly directories: WEEK2, WEEK3, WEEK7, Week1
 
 The Week1 directory will be assessed 
 
@@ -51,27 +50,116 @@ Assessing WEEK1...
 
 Found the following directories: Code, SandBox, Results
 
-Found the following files: 
+Found the following files: README.txt, .DS_Store
 
 Checking for readme file in weekly directory...
 
-README file missing, 1 pt deducted
+Found README in parent directory, named: README.txt
 
-Current Points = 99
+Printing contents of README.txt:
+**********************************************************************
+This is CMEE WEEK1 coursework. 
+
+The aim is to push my coursework git repository(.gitgnore and readme files). 
+
+And invite my assessor to your coursework repository.
+
+CompileLaTeX.sh is tested with FirstExample.tex and been brought it under verson control under Week1 in my repository.**********************************************************************
 
 Data directory missing!
 
 Found following files in results directory: ...
 
-Found 6 code files: variables.sh, FirstExample.tex, MyExampleScript.sh, FirstBiblio.bib, tabtocsv.sh, boilerplate.sh
+Found 7 code files: CompileLaTex.sh, variables.sh, FirstExample.tex, MyExampleScript.sh, FirstBiblio.bib, tabtocsv.sh, boilerplate.sh
 
-Found the following extra files: FirstExample.blg, FirstExample.log, FirstExample.pdf, FirstExample.aux, FirstExample.bbl
+Found the following extra files: FirstExample.blg, FirstExample.bbl, FirstExample.pdf
 0.5 pt deducted per extra file
 
-Current Points = 96.5
+Current Points = 98.5
 
 ======================================================================
 Testing script/code files...
+
+======================================================================
+Inspecting script file CompileLaTex.sh...
+
+File contents are:
+**********************************************************************
+#!/bin/bash
+pdflatex $1.tex
+pdflatex $1.tex
+bibtex $1
+pdflatex $1.tex
+pdflatex $1.tex
+evince $1.pdf &
+
+## Cleanup
+rm *~
+rm *.aux
+rm *.dvi
+rm *.log
+rm *.nav
+rm *.out
+rm *.snm
+rm *.toc
+**********************************************************************
+
+Testing CompileLaTex.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/usr/share/texlive/texmf-dist/tex/latex/tools/.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+File ignored)
+*
+! Emergency stop.
+<*> .tex
+        
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on .log.
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (pre
+**********************************************************************
+
+Encountered error (or warning):
+bibtex: Need exactly one file argument.
+Try `bibtex --help' for more information.
+rm: cannot remove '*~': No such file or directory
+rm: cannot remove '*.aux': No such file or directory
+rm: cannot remove '*.dvi': No such file or directory
+rm: cannot remove '*.log': No such file or directory
+rm: cannot remove '*.nav': No such file or directory
+rm: cannot remove '*.out': No such file or directory
+rm: cannot remove '*.snm': No such file or directory
+rm: cannot remove '*.toc': No such file or directory
+
+** (evince:12570): WARNING **: Error when getting information for file '/home/mhasoba/Documents/Teaching/IC_CMEE/2019-20/Coursework/StudentRepos/XiaoyaZhang_XZ4419/Week1/Code/.pdf': No such file or directory
+
+** (evince:12570): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12570): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12570): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12570): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12570): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12570): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12570): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12570): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12570): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12570): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12570): WARNING **: Error setting file metadata: No such file or directory
 
 ======================================================================
 Inspecting script file variables.sh...
@@ -172,7 +260,7 @@ Hello mhasoba
 
 Code ran without errors
 
-Time consumed = 0.00409s
+Time consumed = 0.00565s
 
 ======================================================================
 Inspecting script file FirstBiblio.bib...
@@ -223,7 +311,7 @@ Done!
 
 Code ran without errors
 
-Time consumed = 0.00571s
+Time consumed = 0.00938s
 
 ======================================================================
 Inspecting script file boilerplate.sh...
@@ -262,19 +350,19 @@ SET TO UPPERCASE
 
 Code ran without errors
 
-Time consumed = 0.00963s
+Time consumed = 0.01321s
 
 ======================================================================
 ======================================================================
 Finished running scripts
 
-Ran into 1 errors
+Ran into 2 errors
 
 ======================================================================
 ======================================================================
 
 FINISHED WEEKLY ASSESSMENT
 
-Current Points for the Week = 96.5
+Current Points for the Week = 98.5
 
 NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!

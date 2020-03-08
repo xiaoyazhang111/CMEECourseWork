@@ -13,7 +13,7 @@ Your Git repo size this week is about 89.24 KiB on disk
 
 PART 1: Checking project workflow...
 
-Found the following directories in parent directory: Week1, Assessment, .git, WEEK2
+Found the following directories in parent directory: Week1, Assessment, HPC Coursework, WEEK7, .git, WEEK2, WEEK3
 
 Found the following files in parent directory: README.txt, .gitignore, .DS_Store
 
@@ -32,13 +32,12 @@ Found README in parent directory, named: README.txt
 Printing contents of README.txt:
 **********************************************************************
 My CMEE Coursework Repository
-Do I like this better?
 **********************************************************************
 
 ======================================================================
 Looking for the weekly directories...
 
-Found 2 weekly directories: WEEK2, Week1
+Found 4 weekly directories: WEEK2, WEEK3, WEEK7, Week1
 
 The Week2 directory will be assessed 
 
@@ -51,17 +50,49 @@ Assessing WEEK2...
 
 Found the following directories: Code, sandbox, data, Results
 
-Found the following files: dictionary.py, .DS_Store
+Found the following files: README.txt, dictionary.py, .DS_Store
 
 Checking for readme file in weekly directory...
 
-README file missing, 1 pt deducted
+Found README in parent directory, named: README.txt
 
-Current Points = 99
+Printing contents of README.txt:
+**********************************************************************
+lc1: 
+It writes three separate list comprehensions that create three different
+lists containing the latin names, comon names and mean body masses for
+each species in birds, respectively. 
+And it finishes the same using conventional loops.
+
+lc2:
+It uses a list comprehension to create a list of month,rainfall tuples where
+the amount of rain was greater than 100 mm.
+It uses a list comprehension to create a list of just month names where the
+amount of rain was less than 50 mm. 
+And they are finished using conventional loops.
+
+dictionary.py:
+It writes a short python script to populate a dictionary called taxa_dic 
+derived from  taxa so that it maps order names to sets of taxa.
+
+tuple.py:
+It writes a script to print these on a separate line or output block by species.
+
+cfexercises1.py:
+It modifys cfexercises1.py to make it a "module" like control_flow.py. 
+And all the foo_x functions take arguments from the user.
+
+cfexercises2.py:
+It outputs evaluations of all the foo_x modules
+
+boilerplate.py and control_flow.py:
+
+They are run from the bash terminal.
+**********************************************************************
 
 Found following files in results directory: ...
 
-Found 18 code files: lc2.py, boilerplate.py, cfexercises2.py, dictionary.py, debugme.py, scope.py, basic_io3.py, cfexercises1.py, basic_io.py, lc1.py, oaks_debugme.py, oaks.py, loops.py, basic_io2.py, control_flow.py, tuple copy.py, test_control_flow.py, cfexercises2 copy 2.py
+Found 19 code files: lc2.py, boilerplate.py, cfexercises2.py, dictionary.py, Untitled-1.py, debugme.py, scope.py, basic_io3.py, cfexercises1.py, basic_io.py, lc1.py, oaks_debugme.py, oaks.py, loops.py, basic_io2.py, control_flow.py, tuple copy.py, test_control_flow.py, cfexercises2 copy 2.py
 
 ======================================================================
 Testing script/code files...
@@ -109,10 +140,11 @@ print(month)
 Testing lc2.py...
 
 lc2.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
+
+No functions, but no script-level docstring either
+2 pts deducted
 
 Current Points = 98
 
@@ -125,7 +157,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.03083s
+Time consumed = 0.02557s
 
 ======================================================================
 Inspecting script file boilerplate.py...
@@ -160,9 +192,12 @@ if __name__ == "__main__":
 Testing boilerplate.py...
 
 boilerplate.py is a Python script file;
- checking for docstrings...
 
-Found one or more doctrings!
+checking for docstrings...
+
+Found one or more docstrings and functions
+
+Current Points = 98
 
 Output (only first 500 characters): 
 
@@ -173,7 +208,7 @@ This is a boilerplate
 
 Code ran without errors
 
-Time consumed = 0.03571s
+Time consumed = 0.02470s
 
 ======================================================================
 Inspecting script file cfexercises2.py...
@@ -207,12 +242,13 @@ while z < 100:
 Testing cfexercises2.py...
 
 cfexercises2.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 97
+No functions, but no script-level docstring either
+2 pts deducted
+
+Current Points = 96
 
 Output (only first 500 characters): 
 
@@ -244,7 +280,7 @@ hello
 
 Code ran without errors
 
-Time consumed = 0.03264s
+Time consumed = 0.02682s
 
 ======================================================================
 Inspecting script file dictionary.py...
@@ -278,23 +314,173 @@ print (taxa_dic)
 Testing dictionary.py...
 
 dictionary.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 96
+No functions, but no script-level docstring either
+2 pts deducted
+
+Current Points = 94
 
 Output (only first 500 characters): 
 
 **********************************************************************
-{'Chiroptera': ['Myotis lucifugus'], 'Rodentia': ['Gerbillus henleyi', 'Peromyscus crinitus', 'Mus domesticus', 'Cleithrionomys rutilus'], 'Carnivora': ['Lyacon pictus', 'Arctocephalus gazella', 'Canis lupus'], 'Afrosoricida': ['Microgale dobsoni', 'Microgale talazaci']}
+{'Carnivora': ['Lyacon pictus', 'Arctocephalus gazella', 'Canis lupus'], 'Chiroptera': ['Myotis lucifugus'], 'Rodentia': ['Gerbillus henleyi', 'Peromyscus crinitus', 'Mus domesticus', 'Cleithrionomys rutilus'], 'Afrosoricida': ['Microgale dobsoni', 'Microgale talazaci']}
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.03105s
+Time consumed = 0.02896s
+
+======================================================================
+Inspecting script file Untitled-1.py...
+
+File contents are:
+**********************************************************************
+import scipy as sc
+import scipy.stats
+import scipy.integrate as integrate
+import matplotlib.pylab as p
+
+
+# a = sc.array(range(5)) # a one-dimensional array
+# a = sc.array(range(5), float)
+# a.dtype 
+# # print(a.dtype)
+# x = sc.arange(5)
+# m = sc.arange(5.) #directly specify float using decimal
+# # print(m)
+# # print(x.shape)
+
+# b = sc.array([i for i in range(10) if i % 2 ==1])
+# # print(b)
+# # # v = sc.array(range(6),float)
+# # # v = sc.arange(8.)
+# # # print(v)
+# # # c = b.tolist()
+# # # print(c)
+# # print(b.shape)
+
+# mat = sc.array([[1,2,6],[3,4,0]])
+
+# mit = sc.array([[[1], [6]],[[2],[6]]])
+# print(mit.shape)
+# # print(mat)
+# print(mat.shape)
+
+# iu = sc.array([[1,3]])
+
+# print(iu.shape)
+
+# m = sc.array([1, 3, 5, 7, 9])
+# n = m.tolist()
+# print(m)
+# print(m.shape)
+# print(n)
+
+# a = [1,2,3,4]
+# b = sc.array(a)
+
+# print(b)
+
+mat = sc.array([[0, 1], [2, 3]])
+# print(mat)
+# print(mat[:,1])
+# print(mat[0,0])
+# print(mat[1,0])
+# print(mat[:,0])
+# print(mat[0,-1])
+# mat[0,0] = -1 
+# # mat[:,0] = [12,12]
+# newRow = [[12,12]]
+# mat = sc.append(mat, newRow, axis = 0)
+# # print(mat)
+
+# # mat = sc.array([[0, 1], [2, 3]])
+# # mat0 = sc.array([[0, 10], [-1, 3]])
+# # matt = sc.concatenate((mat, mat0), axis = 0)
+# # print(matt)
+# # mat = mat.ravel()
+# # print(mat)
+# # mat = mat.reshape((4,1))
+# # print(mat)
+# # print(sc.ones((4,2))) #(4,2) are the (row,col) array dimensions
+
+# # print(sc.zeros((3,1)))
+
+# mm = sc.arange(16)
+# mm = mm.reshape(4,4) 
+# nn = mm.transpose()
+# # print(mm)
+# # print(nn)
+
+# # print(mm//(mm+1).transpose())
+
+# # a = scipy.stats.norm.rvs(size = 10)
+
+# # b = scipy.stats.randint.rvs(0, 10, size =7) 
+# # print(b)
+
+def dCR_dt(pops, t=0):
+
+     R = pops[0]
+     C = pops[1]
+     dRdt = r * R - a * R * C 
+     dCdt = -z * C + e * a * R * C
+    
+     return sc.array([dRdt, dCdt])
+
+r = 1.
+a = 0.1 
+z = 1.5
+e = 0.75
+t = sc.linspace(0, 15, 1000)
+
+R0 = 10
+C0 = 5 
+RC0 = sc.array([R0, C0])
+pops, infodict = integrate.odeint(dCR_dt, RC0, t, full_output=True)
+type(infodict)
+infodict.keys()
+infodict['message']
+
+
+
+
+
+f1 = p.figure()
+
+p.plot(pops[:,0], pops[:,1], 'r-', label='Resource density') # Plot
+
+p.grid()
+p.legend(loc='best')
+p.xlabel('Resource density')
+p.ylabel('Resource density')
+p.title('Consumer density')
+p.show()# To display the figure
+**********************************************************************
+
+Testing Untitled-1.py...
+
+Untitled-1.py is a Python script file;
+
+checking for docstrings...
+
+Found one or more functions, but completely missing docstrings
+2 pts deducted for missing docstring for script, and .5 pt deducted per missing docstring for function
+
+Current Points = 91.5
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 10.00638s
 
 ======================================================================
 Inspecting script file debugme.py...
@@ -312,12 +498,13 @@ createabug(25)******************************************************************
 Testing debugme.py...
 
 debugme.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 95
+Found one or more functions, but completely missing docstrings
+2 pts deducted for missing docstring for script, and .5 pt deducted per missing docstring for function
+
+Current Points = 89.0
 
 Output (only first 500 characters): 
 
@@ -354,12 +541,13 @@ print("Outside the function, the value is", _a_global)**************************
 Testing scope.py...
 
 scope.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 94
+Found one or more functions, but completely missing docstrings
+2 pts deducted for missing docstring for script, and .5 pt deducted per missing docstring for function
+
+Current Points = 86.5
 
 Output (only first 500 characters): 
 
@@ -372,7 +560,7 @@ Outside the function, the value is 5
 
 Code ran without errors
 
-Time consumed = 0.02915s
+Time consumed = 0.03707s
 
 ======================================================================
 Inspecting script file basic_io3.py...
@@ -402,12 +590,13 @@ print(another_dictionary)
 Testing basic_io3.py...
 
 basic_io3.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 93
+No functions, but no script-level docstring either
+2 pts deducted
+
+Current Points = 84.5
 
 Output (only first 500 characters): 
 
@@ -418,7 +607,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.03794s
+Time consumed = 0.03443s
 
 ======================================================================
 Inspecting script file cfexercises1.py...
@@ -466,12 +655,13 @@ def foo_6(x): # Calculate the factorial of x in a different way
 Testing cfexercises1.py...
 
 cfexercises1.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 92
+Found one or more functions, but completely missing docstrings
+2 pts deducted for missing docstring for script, and .5 pt deducted per missing docstring for function
+
+Current Points = 79.5
 
 Output (only first 500 characters): 
 
@@ -481,7 +671,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.02749s
+Time consumed = 0.02967s
 
 ======================================================================
 Inspecting script file basic_io.py...
@@ -550,12 +740,13 @@ print(another_dictionary)
 Testing basic_io.py...
 
 basic_io.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 91
+No functions, but no script-level docstring either
+2 pts deducted
+
+Current Points = 77.5
 
 Output (only first 500 characters): 
 
@@ -584,7 +775,7 @@ Fourth Line
 
 Code ran without errors
 
-Time consumed = 0.03213s
+Time consumed = 0.03751s
 
 ======================================================================
 Inspecting script file lc1.py...
@@ -623,12 +814,13 @@ print(bodyMass)*****************************************************************
 Testing lc1.py...
 
 lc1.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 90
+No functions, but no script-level docstring either
+2 pts deducted
+
+Current Points = 75.5
 
 Output (only first 500 characters): 
 
@@ -641,7 +833,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.03073s
+Time consumed = 0.02660s
 
 ======================================================================
 Inspecting script file oaks_debugme.py...
@@ -685,9 +877,14 @@ doctest.testmod()
 Testing oaks_debugme.py...
 
 oaks_debugme.py is a Python script file;
- checking for docstrings...
 
-Found one or more doctrings!
+checking for docstrings...
+
+Found one or more docstrings and functions
+
+Missing docstring, either in one or functions and/or at the script level
+
+Current Points = 74.5
 
 Output (only first 500 characters): 
 
@@ -709,7 +906,7 @@ Got:
 
 Code ran without errors
 
-Time consumed = 0.07493s
+Time consumed = 0.06135s
 
 ======================================================================
 Inspecting script file oaks.py...
@@ -753,18 +950,19 @@ print(oaks_lc)******************************************************************
 Testing oaks.py...
 
 oaks.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 89
+Found one or more functions, but completely missing docstrings
+2 pts deducted for missing docstring for script, and .5 pt deducted per missing docstring for function
+
+Current Points = 72.0
 
 Output (only first 500 characters): 
 
 **********************************************************************
-{'Quercus cerris', 'Quercus petraea', 'Quercus robur'}
-{'Quercus cerris', 'Quercus petraea', 'Quercus robur'}
+{'Quercus petraea', 'Quercus robur', 'Quercus cerris'}
+{'Quercus petraea', 'Quercus robur', 'Quercus cerris'}
 {'QUERCUS PETRAEA', 'QUERCUS ROBUR', 'QUERCUS CERRIS'}
 {'QUERCUS PETRAEA', 'QUERCUS ROBUR', 'QUERCUS CERRIS'}
 
@@ -772,7 +970,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.03818s
+Time consumed = 0.02897s
 
 ======================================================================
 Inspecting script file loops.py...
@@ -808,12 +1006,13 @@ while b:
 Testing loops.py...
 
 loops.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 88
+No functions, but no script-level docstring either
+2 pts deducted
+
+Current Points = 70.0
 
 Output (only first 500 characters): 
 
@@ -942,7 +1141,7 @@ GERONIMO! infinite loop! ctrl+c
 
 Code ran without errors
 
-Time consumed = 10.34577s
+Time consumed = 10.34147s
 
 ======================================================================
 Inspecting script file basic_io2.py...
@@ -965,12 +1164,13 @@ f.close()
 Testing basic_io2.py...
 
 basic_io2.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 87
+No functions, but no script-level docstring either
+2 pts deducted
+
+Current Points = 68.0
 
 Output (only first 500 characters): 
 
@@ -980,7 +1180,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.07010s
+Time consumed = 0.06325s
 
 ======================================================================
 Inspecting script file control_flow.py...
@@ -1053,9 +1253,14 @@ if (__name__ == "__main__"):
 Testing control_flow.py...
 
 control_flow.py is a Python script file;
- checking for docstrings...
 
-Found one or more doctrings!
+checking for docstrings...
+
+Found one or more docstrings and functions
+
+Missing docstring, either in one or functions and/or at the script level
+
+Current Points = 67.5
 
 Output (only first 500 characters): 
 
@@ -1087,7 +1292,7 @@ True
 
 Code ran without errors
 
-Time consumed = 0.05807s
+Time consumed = 0.05046s
 
 ======================================================================
 Inspecting script file tuple copy.py...
@@ -1111,12 +1316,13 @@ print (birds)
 Testing tuple copy.py...
 
 tuple copy.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 86
+No functions, but no script-level docstring either
+2 pts deducted
+
+Current Points = 65.5
 
 Output (only first 500 characters): 
 
@@ -1215,24 +1421,35 @@ if (__name__ == "__main__"):
 Testing test_control_flow.py...
 
 test_control_flow.py is a Python script file;
- checking for docstrings...
 
-Found one or more doctrings!
+checking for docstrings...
+
+Found one or more docstrings and functions
+
+Current Points = 65.5
 
 Output (only first 500 characters): 
 
 **********************************************************************
-[0;31m---------------------------------------------------------------------------[0m
-[0;31mImportError[0m                               Traceback (most recent call last)
-[0;32m~/Documents/Teaching/IC_CMEE/2019-20/Coursework/StudentRepos/XiaoyaZhang_XZ4419/WEEK2/Code/test_control_flow.py[0m in [0;36m<module>[0;34m()[0m
-[1;32m      6[0m [0;34m[0m[0m
-[1;32m      7[0m [0;32mimport[0m [0msys[0m[0;34m[0m[0m
-[0;32m----> 8[0;31m [0;32mimport[0m [0mipdb[0m[0;34m.[0m[0mset_t
+
 **********************************************************************
 
-Code ran without errors
+Encountered error (or warning):
+Traceback (most recent call last):
+  File "test_control_flow.py", line 8, in <module>
+    import ipdb.set_trace
+ImportError: No module named 'ipdb.set_trace'
 
-Time consumed = 0.57397s
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@python.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    %config Application.verbose_crash=True
+
 
 ======================================================================
 Inspecting script file cfexercises2 copy 2.py...
@@ -1299,14 +1516,14 @@ if (__name__ == "__main__"):
 Testing cfexercises2 copy 2.py...
 
 cfexercises2 copy 2.py is a Python script file;
- checking for docstrings...
 
-Found one or more doctrings!
+checking for docstrings...
 
-Missing docstrings in one more functions!
-.5 pt deducted per missing docstring
+Found one or more docstrings and functions
 
-Current Points = 77.0
+Missing docstring, either in one or functions and/or at the script level
+
+Current Points = 63.5
 
 Output (only first 500 characters): 
 
@@ -1321,13 +1538,13 @@ python3: can't open file 'cfexercises2': [Errno 2] No such file or directory
 ======================================================================
 Finished running scripts
 
-Ran into 3 errors
+Ran into 4 errors
 
 ======================================================================
 ======================================================================
 
 FINISHED WEEKLY ASSESSMENT
 
-Current Points for the Week = 77.0
+Current Points for the Week = 63.5
 
 NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!

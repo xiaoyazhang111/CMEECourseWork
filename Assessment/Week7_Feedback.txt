@@ -13,7 +13,7 @@ Your Git repo size this week is about 89.24 KiB on disk
 
 PART 1: Checking project workflow...
 
-Found the following directories in parent directory: Week1, Assessment, WEEK7, .git, WEEK2, WEEK3
+Found the following directories in parent directory: Week1, Assessment, HPC Coursework, WEEK7, .git, WEEK2, WEEK3
 
 Found the following files in parent directory: README.txt, .gitignore, .DS_Store
 
@@ -32,7 +32,6 @@ Found README in parent directory, named: README.txt
 Printing contents of README.txt:
 **********************************************************************
 My CMEE Coursework Repository
-Do I like this better?
 **********************************************************************
 
 ======================================================================
@@ -51,13 +50,37 @@ Assessing WEEK7...
 
 Found the following directories: Code, Result, Data
 
-Found the following files: .DS_Store
+Found the following files: README.txt, .DS_Store
 
 Checking for readme file in weekly directory...
 
-README file missing, 1 pt deducted
+Found README in parent directory, named: README.txt
 
-Current Points = 99
+Printing contents of README.txt:
+**********************************************************************
+LV1:
+Created a self-standing script using the example in Jupyter.
+
+LV2:
+It modifys LV1.py that has the following features:
+It takes arguments for the four LV model parameters r, a, z ,e from the command line:
+LV2.py arg1 arg2 ... etc
+And it runs the Lotka-Volterra model with prey density dependence rR(1−RK),
+which changes the coupled ODEs to,dRdtdCdt=rR(1−RK)−aCR=−zC+eaCR
+
+DrawFW.py:
+It plots a food web network in a program file and saves the plotted network as a pdf.
+
+blackbirds.py:
+Read the file blackbirds.txt, replace \t's and \n's in code with a spaces.
+It extends this script to make it captures the Kingdom, Phylum and Species
+name for each species and prints it out to screen neatly.
+
+using_os.py:
+Uses the subprocess.os module to get a list of files and directories.
+Gets a list of files and directories that start with an uppercase 'C'
+
+**********************************************************************
 
 Found following files in results directory: LV2_mode1.pdf, LV2_mode.pdf, DrawFW.pdf, .DS_Store, LV1_mode.pdf, LV1_mode1.pdf...
 ideally, Results directory should be empty other than, perhaps, a readme. 
@@ -67,7 +90,7 @@ Found 5 code files: blackbirds.py, using_os.py, LV1.py, DrawFW.py, LV2.py
 Found the following extra files: .DS_Store
 0.5 pt deducted per extra file
 
-Current Points = 98.5
+Current Points = 99.5
 
 ======================================================================
 Testing script/code files...
@@ -116,7 +139,7 @@ checking for docstrings...
 No functions, but no script-level docstring either
 2 pts deducted
 
-Current Points = 96.5
+Current Points = 97.5
 
 Output (only first 500 characters): 
 
@@ -184,7 +207,7 @@ checking for docstrings...
 
 Found no functions, but one docstring for the script, good
 
-Current Points = 96.5
+Current Points = 97.5
 
 Output (only first 500 characters): 
 
@@ -263,7 +286,7 @@ checking for docstrings...
 Found one or more functions, but completely missing docstrings
 2 pts deducted for missing docstring for script, and .5 pt deducted per missing docstring for function
 
-Current Points = 94.0
+Current Points = 95.0
 
 Output (only first 500 characters): 
 
@@ -273,7 +296,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 10.00866s
+Time consumed = 10.01258s
 
 ======================================================================
 Inspecting script file DrawFW.py...
@@ -328,7 +351,7 @@ checking for docstrings...
 Found one or more functions, but completely missing docstrings
 2 pts deducted for missing docstring for script, and .5 pt deducted per missing docstring for function
 
-Current Points = 91.5
+Current Points = 92.5
 
 Output (only first 500 characters): 
 
@@ -426,7 +449,7 @@ checking for docstrings...
 Found one or more functions, but completely missing docstrings
 2 pts deducted for missing docstring for script, and .5 pt deducted per missing docstring for function
 
-Current Points = 89.0
+Current Points = 90.0
 
 Output (only first 500 characters): 
 
@@ -436,7 +459,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 10.01561s
+Time consumed = 10.00800s
 
 ======================================================================
 ======================================================================
@@ -449,6 +472,6 @@ Ran into 3 errors
 
 FINISHED WEEKLY ASSESSMENT
 
-Current Points for the Week = 89.0
+Current Points for the Week = 90.0
 
 NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!
